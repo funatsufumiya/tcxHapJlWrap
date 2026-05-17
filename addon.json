@@ -1,0 +1,7 @@
+{
+  "description": "tcxHap Julia binding using CxxWrap.jl",
+  "author": "Fumiya Funatsu",
+  "license": "MIT",
+  "keywords": ["language"],
+  "dependencies": ["tcxHap"]
+}
