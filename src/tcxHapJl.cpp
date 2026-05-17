@@ -44,7 +44,27 @@ JLCXX_MODULE define_julia_module(jlcxx::Module& mod)
 
     // // End of references.
 
+    using HapFormat = tcx::hap::HapFormat;
     using HapPlayer = tcx::hap::HapPlayer;
+
+    mod.add_enum<HapFormat>("HapFormat",
+        std::vector<const char*>({
+            "Unknown",
+            "DXT1",
+            "DXT5",
+            "YCoCgDXT5",
+            "BC7",
+            "RGTC1"
+        }),
+        std::vector<int>({
+            (int)HapFormat::Unknown,
+            (int)HapFormat::DXT1,
+            (int)HapFormat::DXT5,
+            (int)HapFormat::YCoCgDXT5,
+            (int)HapFormat::BC7,
+            (int)HapFormat::RGTC1
+        })
+    );
 
     mod.add_type<HapPlayer>("HapPlayer")
         .constructor<>()
@@ -53,7 +73,7 @@ JLCXX_MODULE define_julia_module(jlcxx::Module& mod)
         .method("getChunkCount", &HapPlayer::getChunkCount)
         .method("resetStats", &HapPlayer::resetStats)
         .method("getHapFormat", &HapPlayer::getHapFormat)
-        .method("setSpeed", &HapPlayer::setSpeed)
+        // .method("setSpeed", &HapPlayer::setSpeed)
         // .method("isHapFile", &HapPlayer::isHapFile)
         .method("load", &HapPlayer::load)
         .method("close", &HapPlayer::close)
