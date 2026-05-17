@@ -2,7 +2,7 @@
 
 tcxOsc of [TrussC](https://trussc.org/) for Julia binding generator using [CxxWrap.jl](https://github.com/JuliaInterop/CxxWrap.jl). Forked from [tcxJuliaCxxWrap](https://github.com/funatsufumiya/tcxJuliaCxxWrap/).
 
-This addon is used to create [tcxOsc.jl](https://github.com/funatsufumiya/tcxOsc.jl) package.
+This addon is used to create [tcxHap.jl](https://github.com/funatsufumiya/tcxHap.jl) package.
 
 ## Known Issues
 
